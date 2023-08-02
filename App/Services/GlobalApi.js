@@ -14,6 +14,11 @@ const nearByPlace = (latitude, longitude, type) => {
   return axios.get(url);
 };
 
+const searchByText = (text) => {
+  return axios.get(BASE_URL + `/textsearch/json?query=${text}&key=${API_KEY}`);
+};
+
 export default {
   nearByPlace,
+  searchByText,
 };

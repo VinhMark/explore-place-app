@@ -1,8 +1,8 @@
 import { TransitionPresets, createStackNavigator } from '@react-navigation/stack';
-import Home from '../Screens/Home';
+import Search from '../Screens/Search';
 import PlaceDetail from '../Components/Home/PlaceDetail/PlaceDetail';
 
-export default function HomeNavigate() {
+export default function SearchNavigate() {
   const Stack = createStackNavigator();
   const isAndroid = true;
   return (
@@ -12,9 +12,9 @@ export default function HomeNavigate() {
         ...(isAndroid && TransitionPresets.ModalPresentationIOS),
       }}
     >
-      <Stack.Screen name='home-screen' component={Home} options={{ headerShown: false }} />
+      <Stack.Screen name='search-screen' component={Search} options={{ headerShown: false }} />
       <Stack.Screen
-        name='place-detail'
+        name='search-place-detail'
         component={PlaceDetail}
         screenOptions={{
           presentation: 'modal',

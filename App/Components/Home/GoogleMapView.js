@@ -30,7 +30,7 @@ export default function GoogleMapView({ placeList }) {
         Top Near By Places
       </Text>
 
-      <View style={{ marginTop: 10, borderRadius: 20, overflow: 'hidden' }}>
+      <View>
         <MapView
           style={{ width: '100%', height: 200 }}
           provider={PROVIDER_GOOGLE}

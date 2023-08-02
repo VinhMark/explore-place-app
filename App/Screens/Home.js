@@ -23,7 +23,6 @@ export default function Home() {
     setIsLoading(true);
     setPlaceList([]);
     GlobalApi.nearByPlace(location.coords.latitude, location.coords.longitude, type).then((res) => {
-      console.log(res.data.results.length);
       setPlaceList(res.data.results);
     });
 
